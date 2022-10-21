@@ -1,0 +1,34 @@
+@prefix : <http://ontologies.metaphacts.com/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a sh:NodeShape;
+  sh:property <http://ontologies.metaphacts.com/newevent-ontology/25d9be82-96eb-4451-86b8-945824ee6489>;
+  sh:targetClass <http://ontologies.metaphacts.com/newevent-ontology/AnotherClass> .
+
+:newevent-ontology a owl:Ontology;
+  dcterms:title "NewEvent-ontology";
+  <http://www.linkedmodel.org/1.2/schema/vaem#namespace> <http://ontologies.metaphacts.com/newevent-ontology/>;
+  rdfs:label "NewEvent-ontology" .
+
+<http://ontologies.metaphacts.com/newevent-ontology/25d9be82-96eb-4451-86b8-945824ee6489>
+  a sh:PropertyShape;
+  sh:datatype xsd:string;
+  sh:path <http://ontologies.metaphacts.com/newevent-ontology/label> .
+
+<http://ontologies.metaphacts.com/newevent-ontology/AnotherClass> a owl:Class;
+  rdfs:isDefinedBy :newevent-ontology;
+  rdfs:label "AnotherClass" .
+
+<http://ontologies.metaphacts.com/newevent-ontology/Event> a owl:Class;
+  rdfs:comment "Event test";
+  rdfs:isDefinedBy :newevent-ontology;
+  rdfs:label "Event" .
+
+<http://ontologies.metaphacts.com/newevent-ontology/label> a owl:DatatypeProperty;
+  rdfs:isDefinedBy :newevent-ontology;
+  rdfs:label "label" .
