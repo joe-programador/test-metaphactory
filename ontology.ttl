@@ -7,6 +7,10 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] a sh:NodeShape;
+  sh:property <http://ontologies.metaphacts.com/newevent-ontology/9911ce9b-f89b-45e5-86e8-041b7b86c87b>;
+  sh:targetClass <http://ontologies.metaphacts.com/newevent-ontology/Event> .
+
+[] a sh:NodeShape;
   sh:property <http://ontologies.metaphacts.com/newevent-ontology/25d9be82-96eb-4451-86b8-945824ee6489>,
     <http://ontologies.metaphacts.com/newevent-ontology/529a1277-19b9-42d1-a700-b9df2761cc74>;
   sh:targetClass <http://ontologies.metaphacts.com/newevent-ontology/AnotherClass> .
@@ -26,18 +30,27 @@
   sh:class <http://ontologies.metaphacts.com/newevent-ontology/Event>;
   sh:path <http://ontologies.metaphacts.com/newevent-ontology/provide> .
 
+<http://ontologies.metaphacts.com/newevent-ontology/9911ce9b-f89b-45e5-86e8-041b7b86c87b>
+  a sh:PropertyShape;
+  sh:datatype xsd:string;
+  sh:path <http://ontologies.metaphacts.com/newevent-ontology/newAttribute> .
+
 <http://ontologies.metaphacts.com/newevent-ontology/AnotherClass> a owl:Class;
   rdfs:isDefinedBy :newevent-ontology;
   rdfs:label "AnotherClass" .
 
 <http://ontologies.metaphacts.com/newevent-ontology/Event> a owl:Class;
-  rdfs:comment "Event test";
+  rdfs:comment "Descriptions";
   rdfs:isDefinedBy :newevent-ontology;
   rdfs:label "Event" .
 
 <http://ontologies.metaphacts.com/newevent-ontology/label> a owl:DatatypeProperty;
   rdfs:isDefinedBy :newevent-ontology;
   rdfs:label "label" .
+
+<http://ontologies.metaphacts.com/newevent-ontology/newAttribute> a owl:DatatypeProperty;
+  rdfs:isDefinedBy :newevent-ontology;
+  rdfs:label "New attribute" .
 
 <http://ontologies.metaphacts.com/newevent-ontology/provide> a owl:ObjectProperty;
   rdfs:isDefinedBy :newevent-ontology;
