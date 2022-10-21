@@ -24,6 +24,11 @@
   rdfs:isDefinedBy :newevent-ontology;
   rdfs:label "AnotherClass" .
 
+<http://ontologies.metaphacts.com/newevent-ontology/Event> a owl:Class;
+  rdfs:comment "Event test";
+  rdfs:isDefinedBy :newevent-ontology;
+  rdfs:label "Event" .
+
 <http://ontologies.metaphacts.com/newevent-ontology/label> a owl:DatatypeProperty;
   rdfs:isDefinedBy :newevent-ontology;
   rdfs:label "label" .
